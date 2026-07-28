@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta name="theme-color" content="#081A2B">
+    <title>二维码验收｜丝路护航</title>
+    <link rel="icon" href="../assets/images/brand-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../assets/css/tokens.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <style>
+      body { background: var(--paper-50); }
+      header { padding: 24px 0; color: #fff; background: var(--ink-950); }
+      .wrap { width: min(calc(100% - 32px), 1060px); margin-inline: auto; }
+      .topbar { display: flex; align-items: center; justify-content: space-between; gap: 18px; }
+      .topbar a { color: #fff; }
+      main { padding: 64px 0 90px; }
+      h1 { margin-bottom: 8px; font-size: 38px; }
+      .lead { max-width: 720px; color: var(--text-600); }
+      .notice { margin: 28px 0; padding: 18px; color: var(--ink-950); background: var(--gold-100); border-left: 3px solid var(--gold-500); }
+      .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+      .test-card { min-width: 0; padding: 22px; background: #fff; border: 1px solid var(--line); border-radius: 8px; }
+      .test-card h2 { font-size: 20px; }
+      .stage { display: grid; min-height: 360px; place-items: center; margin-top: 14px; padding: 24px; background: #fff; border: 1px solid var(--line); }
+      .stage--dark { background: var(--ink-950); }
+      .stage img { width: min(280px, 100%); height: auto; }
+      .poster { width: min(360px, 100%); border: 1px solid var(--line); }
+      .print-row { display: flex; flex-wrap: wrap; align-items: end; justify-content: center; gap: 36px; }
+      .print-sample { text-align: center; }
+      .print-sample img { display: block; width: 3cm; margin: 0 auto 10px; }
+      .print-sample--large img { width: 5cm; }
+      .phone { width: min(320px, 100%); padding: 14px 10px 22px; background: #111c27; border: 6px solid #2f3d48; border-radius: 30px; box-shadow: 0 18px 36px rgba(8,26,43,.22); }
+      .phone::before { display: block; width: 72px; height: 6px; margin: 0 auto 14px; content: ""; background: #60717d; border-radius: 999px; }
+      .phone img { width: 100%; border-radius: 12px; }
+      .full { grid-column: 1 / -1; }
+      @media (max-width: 700px) {
+        main { padding-top: 44px; }
+        h1 { font-size: 30px; }
+        .grid { grid-template-columns: 1fr; }
+        .full { grid-column: auto; }
+        .stage { min-height: 300px; padding: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap topbar">
+        <strong>丝路护航 · 二维码验收</strong>
+        <a href="../">返回公开展示站</a>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <h1>二维码多场景测试页</h1>
+      <p class="lead">三份二维码均指向丝路护航公开脱敏展示站，不是证券业务办理、咨询或信息提交入口。</p>
+      <p class="notice"><strong>验收提示：</strong>请使用微信、系统相机和支付宝分别测试扫码。</p>
+
+      <div class="grid">
+        <section class="test-card">
+          <h2>原始二维码 · 白色背景</h2>
+          <div class="stage">
+            <img src="../assets/qr/silu-huhang-qr-core.svg" alt="丝路护航公开展示站原始二维码">
+          </div>
+        </section>
+
+        <section class="test-card">
+          <h2>原始二维码 · 深色背景</h2>
+          <div class="stage stage--dark">
+            <img src="../assets/qr/silu-huhang-qr-core.svg" alt="深色背景下的丝路护航公开展示站二维码">
+          </div>
+        </section>
+
+        <section class="test-card">
+          <h2>品牌海报码</h2>
+          <div class="stage">
+            <img class="poster" src="../assets/qr/silu-huhang-qr-poster.png" alt="带丝路护航品牌外框的展示站二维码海报">
+          </div>
+        </section>
+
+        <section class="test-card">
+          <h2>手机屏幕模拟</h2>
+          <div class="stage">
+            <div class="phone">
+              <img src="../assets/qr/silu-huhang-qr-poster.png" alt="手机屏幕中的丝路护航品牌二维码">
+            </div>
+          </div>
+        </section>
+
+        <section class="test-card full">
+          <h2>打印尺寸模拟</h2>
+          <div class="stage print-row">
+            <div class="print-sample">
+              <img src="../assets/qr/silu-huhang-qr-core.svg" alt="3厘米打印尺寸二维码">
+              <strong>3厘米</strong>
+            </div>
+            <div class="print-sample print-sample--large">
+              <img src="../assets/qr/silu-huhang-qr-core.svg" alt="5厘米打印尺寸二维码">
+              <strong>5厘米</strong>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

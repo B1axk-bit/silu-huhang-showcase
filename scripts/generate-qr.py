@@ -4,12 +4,12 @@
 from __future__ import annotations
 
 import io
+import subprocess
 import sys
 import tempfile
 from pathlib import Path
 
 import cv2
-import numpy as np
 import segno
 from PIL import Image, ImageDraw, ImageFont
 
@@ -116,7 +116,7 @@ def branded_asset(width: int, height: int, qr_scale: int, output: Path) -> None:
 
 
 def decode(path: Path) -> str:
-    image = cv2.imread(str(path))
+    image = cv2.imread(str(path), cv2.IMREAD_GRAYSCALE)
     if image is None:
         raise RuntimeError(f"Could not read {path}")
     value, _, _ = cv2.QRCodeDetector().detectAndDecode(image)
@@ -134,13 +134,17 @@ def main() -> int:
     branded_asset(1800, 2220, 15, print_asset)
 
     with tempfile.TemporaryDirectory() as temp_dir:
-      core_png = Path(temp_dir) / "core-from-svg.png"
-      qr.save(core_png, kind="png", scale=12, border=4, dark=INK, light=PAPER)
-      decoded = {
-          "core SVG raster": decode(core_png),
-          "poster PNG": decode(poster),
-          "print PNG": decode(print_asset),
-      }
+        core_png = Path(temp_dir) / "core-from-svg.png"
+        subprocess.run(
+            ["sips", "-s", "format", "png", str(core_svg), "--out", str(core_png)],
+            check=True,
+            stdout=subprocess.DEVNULL,
+        )
+        decoded = {
+            "core SVG raster": decode(core_png),
+            "poster PNG": decode(poster),
+            "print PNG": decode(print_asset),
+        }
 
     failed = False
     for label, value in decoded.items():

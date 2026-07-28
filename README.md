@@ -35,6 +35,15 @@ python3 scripts/validate-links.py
 
 二维码资产在正式 Pages 地址可访问后生成并执行解码验证。
 
+在 macOS 上复现二维码物料：
+
+```bash
+python3 -m pip install segno Pillow opencv-python-headless
+python3 scripts/generate-qr.py
+```
+
+二维码测试页位于 `site/qr-test/`，包含白底、深色底、打印尺寸和手机屏幕模拟。
+
 ## 许可
 
 代码以 MIT License 发布。监管机关公开页面及其内容的权利归原发布方所有，本展示站仅提供短摘要和来源链接。
