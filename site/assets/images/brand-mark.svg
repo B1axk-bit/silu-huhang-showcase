@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 72" role="img" aria-labelledby="title desc">
+  <title id="title">丝路护航品牌图标</title>
+  <desc id="desc">盾牌轮廓内包含简化城门和智能光点</desc>
+  <path d="M32 3 57 13v19c0 18-10.7 30.3-25 37C17.7 62.3 7 50 7 32V13L32 3Z" fill="#10283B" stroke="#C7A45B" stroke-width="2"/>
+  <path d="M17 47h30M20 47V31l12-9 12 9v16M25 47V35h14v12M29 35v-6h6v6" fill="none" stroke="#E8F2EF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="45" cy="20" r="4.5" fill="#C7A45B"/>
+  <circle cx="45" cy="20" r="8" fill="none" stroke="#C7A45B" stroke-opacity=".35"/>
+</svg>

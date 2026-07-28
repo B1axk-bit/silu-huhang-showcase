@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <meta
+      name="description"
+      content="将高频合规咨询和客户沟通经验，固化为可审核、可追溯、可组合、可安全放行的智能工作台。"
+    >
+    <meta name="theme-color" content="#081A2B">
+    <title>丝路护航｜证券营业部合规沟通智能助手</title>
+    <link rel="icon" href="assets/images/brand-mark.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+
+    <header class="site-header">
+      <div class="container nav-shell">
+        <a class="brand" href="#home" aria-label="丝路护航产品首页">
+          <img src="assets/images/brand-mark.svg" alt="">
+          <span>
+            <span class="brand-name">丝路护航</span>
+            <span class="brand-subtitle">证券营业部合规沟通智能助手</span>
+          </span>
+        </a>
+
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-label="打开主导航"
+          aria-controls="main-nav"
+          aria-expanded="false"
+          data-menu-toggle
+        >
+          <span class="menu-toggle-lines" aria-hidden="true"></span>
+        </button>
+
+        <nav id="main-nav" class="main-nav" aria-label="主导航" data-main-nav>
+          <a href="#home">产品首页</a>
+          <a href="#assistant">问小航</a>
+          <a href="#self-check">办事前自查</a>
+          <a href="#cases">案例学习</a>
+          <a href="#onboarding">新员工启航</a>
+          <a href="#governance">治理机制</a>
+          <a href="#outcomes">建设成果</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">公开脱敏展示版</span>
+            <h1 id="hero-title">丝路护航</h1>
+            <p class="hero-lead">
+              证券营业部合规沟通智能助手。将营业部高频合规咨询和客户沟通经验，固化为可审核、可追溯、可组合、可安全放行的智能工作台。
+            </p>
+
+            <div class="loop-line" aria-label="产品闭环">
+              <span class="loop-step">新员工先启航</span>
+              <span class="loop-step">平时学案例</span>
+              <span class="loop-step">办事先自查</span>
+              <span class="loop-step">遇事问小航</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="button" href="#assistant">体验产品能力</a>
+              <a class="button button--secondary" href="#governance">了解治理机制</a>
+            </div>
+            <p class="hero-note">不连接真实业务系统｜不接收真实客户问题｜不构成正式业务结论</p>
+          </div>
+
+          <div class="hero-visual">
+            <div class="workbench-frame">
+              <img
+                src="assets/images/product-workbench.svg"
+                alt="丝路护航工作台概念图，展示问小航、案例学习和办事前自查三个入口"
+                width="720"
+                height="560"
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="assistant" class="section section--white" aria-labelledby="assistant-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">遇事问小航</span>
+              <h2 id="assistant-title">把“怎么说”变成受控沟通</h2>
+            </div>
+            <p>员工输入脱敏场景，系统识别问题、确认事实、组合受控话术并执行安全校验。</p>
+          </div>
+
+          <div class="demo-shell">
+            <label class="form-label" for="assistant-question">输入脱敏场景</label>
+            <textarea
+              id="assistant-question"
+              class="scenario-input"
+              maxlength="500"
+              placeholder="请选择下方示例，或输入不含任何真实客户信息的演示问题"
+            ></textarea>
+            <p class="form-hint">公开站不会上传、保存或发送输入内容。请勿输入任何真实客户、员工或业务信息。</p>
+            <div id="assistant-examples" class="example-list" aria-label="脱敏示例问题"></div>
+
+            <div class="form-actions">
+              <span class="demo-disclosure">演示内容由本地静态数据生成</span>
+              <button id="assistant-generate" class="button button--jade" type="button">生成演示回复</button>
+            </div>
+
+            <div id="assistant-loading" class="loading-state" role="status" hidden>
+              <span class="loading-dot" aria-hidden="true"></span>
+              <span class="loading-dot" aria-hidden="true"></span>
+              <span class="loading-dot" aria-hidden="true"></span>
+              <span>正在组合演示回复并执行本地安全校验</span>
+            </div>
+
+            <div
+              id="assistant-result"
+              class="assistant-result"
+              tabindex="-1"
+              aria-live="polite"
+              hidden
+            ></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="self-check" class="section" aria-labelledby="self-check-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">办事先自查</span>
+              <h2 id="self-check-title">开展客户营销活动</h2>
+            </div>
+            <p>七个受控问题帮助员工在行动前确认边界。待确认是待核实状态，不等同于已确认风险。</p>
+          </div>
+
+          <div class="check-layout">
+            <form id="self-check-form" class="demo-shell">
+              <div class="form-actions" style="margin-top: 0">
+                <div>
+                  <strong>演示自查</strong>
+                  <p class="form-hint">页面初始答案均为“待确认”。</p>
+                </div>
+                <div class="inline-actions">
+                  <button id="self-check-demo-fill" class="button button--jade" type="button">一键填充演示答案</button>
+                  <button id="self-check-reset" class="button button--ghost" type="button">全部重置</button>
+                </div>
+              </div>
+              <div id="self-check-questions" class="question-list"></div>
+            </form>
+
+            <aside
+              id="self-check-result"
+              class="check-result"
+              tabindex="-1"
+              aria-live="polite"
+              aria-label="自查结果"
+            ></aside>
+          </div>
+
+          <p class="fixed-disclaimer" style="margin-top: 18px; border-top: 1px solid var(--line); border-radius: var(--radius-sm)">
+            该结果仅用于演示业务前自查逻辑，不构成业务审批、合规批准或正式处理结论。
+          </p>
+        </div>
+      </section>
+
+      <section id="cases" class="section section--white" aria-labelledby="cases-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">平时学案例</span>
+              <h2 id="cases-title">小航说案</h2>
+            </div>
+            <p>把官方公开文件和“小航风险解读”清晰分层，让监管案例落到员工可执行的动作。</p>
+          </div>
+
+          <div id="case-grid" class="three-column"></div>
+        </div>
+      </section>
+
+      <section id="onboarding" class="section section--ink" aria-labelledby="onboarding-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">新员工先启航</span>
+              <h2 id="onboarding-title">小航启航 · 新员工合规成长路径</h2>
+            </div>
+            <div>
+              <span class="status-chip status-chip--warning">下一阶段建设中</span>
+              <p style="margin-top: 12px">七天路线预览，以核心边界、案例、微测和自查建立入职早期的合规行动框架。</p>
+            </div>
+          </div>
+
+          <div id="onboarding-timeline" class="timeline" aria-label="七天学习路线"></div>
+
+          <div class="learning-formula" aria-label="单日学习设计">
+            <span>一个核心边界</span><b>→</b>
+            <span>三个必须知道</span><b>→</b>
+            <span>三条不能触碰</span><b>→</b>
+            <span>一个真实案例</span><b>→</b>
+            <span>两道微测</span><b>→</b>
+            <span>一项自查</span><b>→</b>
+            <span>一个问小航练习</span>
+          </div>
+
+          <p class="notice-box" style="margin-top: 32px; color: rgba(255,255,255,.7); background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14)">
+            本模块正在建设，未来用于新员工入职辅导和日常学习，不替代公司正式培训、考试、任职资格管理及培训档案。
+          </p>
+        </div>
+      </section>
+
+      <section id="governance" class="section section--ink" aria-labelledby="governance-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">治理机制</span>
+              <h2 id="governance-title">不是让模型自由回答，而是让经验在边界内被安全使用</h2>
+            </div>
+            <p>演示治理框架只展示公开概念，不展示真实内部记录、技术指纹或受控正文。</p>
+          </div>
+
+          <div class="governance-visual">
+            <img
+              src="assets/images/governance-flow.svg"
+              alt="六步治理流程：输入脱敏场景、场景识别、关键事实确认、受控内容组合、系统安全校验、分级放行或转人工"
+              width="1040"
+              height="220"
+            >
+          </div>
+
+          <div class="governance-grid">
+            <article class="governance-card">
+              <h3>可审核</h3>
+              <p>内容上线前经过人工审核，公开演示内容与内部受控内容相互隔离。</p>
+            </article>
+            <article class="governance-card">
+              <h3>可追溯</h3>
+              <p>内容、公开来源、版本和决定具备回溯路径。</p>
+            </article>
+            <article class="governance-card">
+              <h3>可组合</h3>
+              <p>不同场景按受控模块和场景包进行组合，而非自由生成结论。</p>
+            </article>
+            <article class="governance-card">
+              <h3>可安全放行</h3>
+              <p>系统按事实、禁语、来源和放行规则执行自动检查。</p>
+            </article>
+          </div>
+
+          <div class="release-row" aria-label="三种放行状态">
+            <div class="release-state">可直接使用</div>
+            <div class="release-state">仅限首轮回复</div>
+            <div class="release-state">不得对外使用</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="outcomes" class="section" aria-labelledby="outcomes-title">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <span class="section-kicker">建设成果</span>
+              <h2 id="outcomes-title">从概念原型到完整演示产品</h2>
+            </div>
+            <p>形成沟通工作台、案例学习和办事前自查三个核心入口，当前适合内部展示、内容审核和试点准备。</p>
+          </div>
+
+          <div class="metrics-grid" aria-label="当前建设成果数字">
+            <div class="metric"><strong>25</strong><span>个专业回复模板</span></div>
+            <div class="metric"><strong>15</strong><span>个通用沟通模块</span></div>
+            <div class="metric"><strong>12</strong><span>个高频场景包</span></div>
+            <div class="metric"><strong>24</strong><span>条监管案例学习卡</span></div>
+            <div class="metric"><strong>6</strong><span>套办事前自查</span></div>
+            <div class="metric"><strong>42</strong><span>道受控自查题</span></div>
+            <div class="metric"><strong>48</strong><span>道案例微测</span></div>
+            <div class="metric"><strong>180</strong><span>个评测案例</span></div>
+            <div class="metric"><strong>300</strong><span>次静态评测</span></div>
+            <div class="metric"><strong>283</strong><span>项自动化测试</span></div>
+            <div class="metric"><strong>0</strong><span>项依赖漏洞</span></div>
+          </div>
+
+          <div class="limits-band">
+            <h3>当前仍在试点准备阶段</h3>
+            <ul>
+              <li>24条案例仍为Draft</li>
+              <li>6套自查规则仍为Draft</li>
+              <li>真实模型资格评测仍未完成</li>
+              <li>当前尚未进入正式员工试点</li>
+              <li>当前尚未部署Production</li>
+              <li>尚未达到正式生产上线条件</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a class="brand" href="#home">
+              <img src="assets/images/brand-mark.svg" alt="">
+              <span>
+                <span class="brand-name">丝路护航</span>
+                <span class="brand-subtitle">公开脱敏展示版</span>
+              </span>
+            </a>
+            <p style="margin-top: 18px">新员工先启航，平时学案例，办事先自查，遇事问小航。</p>
+          </div>
+          <div class="footer-disclaimer">
+            <strong style="color: #fff">公开页声明</strong>
+            <p>
+              本页面仅用于项目能力介绍和脱敏交互演示。不办理证券业务，不构成投资建议，不提供客户服务，不代表任何机构正式业务系统或正式制度要求。
+            </p>
+            <p>页面不提供联系表单、客户咨询、登录、数据上传、真实问题提交或文件上传。</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>丝路护航 · 公开脱敏展示版</span>
+          <span>不连接真实业务系统</span>
+        </div>
+      </div>
+    </footer>
+
+    <div id="case-modal-backdrop" class="modal-backdrop" hidden>
+      <section
+        id="case-modal"
+        class="modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="case-modal-title"
+      >
+        <header class="modal-header">
+          <h2 id="case-modal-title">案例学习卡</h2>
+          <button id="case-modal-close" class="icon-button" type="button" aria-label="关闭案例学习卡">×</button>
+        </header>
+        <div id="case-modal-body" class="modal-body"></div>
+      </section>
+    </div>
+
+    <script src="assets/js/data.js" defer></script>
+    <script src="assets/js/navigation.js" defer></script>
+    <script src="assets/js/assistant-demo.js" defer></script>
+    <script src="assets/js/case-demo.js" defer></script>
+    <script src="assets/js/self-check-demo.js" defer></script>
+    <script src="assets/js/onboarding-demo.js" defer></script>
+    <script src="assets/js/app.js" defer></script>
+  </body>
+</html>

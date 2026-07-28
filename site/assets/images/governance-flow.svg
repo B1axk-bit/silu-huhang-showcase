@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1040 220" role="img" aria-labelledby="title desc">
+  <title id="title">受控内容治理流程</title>
+  <desc id="desc">从输入脱敏场景到分级放行或转人工的六步流程</desc>
+  <rect width="1040" height="220" rx="8" fill="#0D2436"/>
+  <path d="M95 109h850" stroke="#385365" stroke-width="2"/>
+  <path d="m939 101 12 8-12 8" fill="none" stroke="#C7A45B" stroke-width="2"/>
+  <g font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" text-anchor="middle">
+    <g transform="translate(90 109)">
+      <circle r="34" fill="#185751" stroke="#4A817C"/>
+      <text y="5" fill="#FFF" font-size="16" font-weight="700">01</text>
+      <text y="61" fill="#D6E2DF" font-size="13">输入脱敏场景</text>
+    </g>
+    <g transform="translate(262 109)">
+      <circle r="34" fill="#10283B" stroke="#587083"/>
+      <text y="5" fill="#FFF" font-size="16" font-weight="700">02</text>
+      <text y="61" fill="#D6E2DF" font-size="13">场景识别</text>
+    </g>
+    <g transform="translate(434 109)">
+      <circle r="34" fill="#10283B" stroke="#587083"/>
+      <text y="5" fill="#FFF" font-size="16" font-weight="700">03</text>
+      <text y="61" fill="#D6E2DF" font-size="13">关键事实确认</text>
+    </g>
+    <g transform="translate(606 109)">
+      <circle r="34" fill="#10283B" stroke="#587083"/>
+      <text y="5" fill="#FFF" font-size="16" font-weight="700">04</text>
+      <text y="61" fill="#D6E2DF" font-size="13">受控内容组合</text>
+    </g>
+    <g transform="translate(778 109)">
+      <circle r="34" fill="#10283B" stroke="#587083"/>
+      <text y="5" fill="#FFF" font-size="16" font-weight="700">05</text>
+      <text y="61" fill="#D6E2DF" font-size="13">系统安全校验</text>
+    </g>
+    <g transform="translate(950 109)">
+      <circle r="34" fill="#C7A45B" stroke="#E0C88F"/>
+      <text y="5" fill="#081A2B" font-size="16" font-weight="700">06</text>
+      <text y="61" fill="#F4E8CA" font-size="13">分级放行或转人工</text>
+    </g>
+  </g>
+</svg>
